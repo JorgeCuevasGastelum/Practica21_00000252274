@@ -1,0 +1,19 @@
+<!-- clase() lleva paréntesis: input.required() regresa una signal y se lee llamándola. -->
+<article
+  class="tarjeta-clase"
+  [class.tarjeta-clase--activa]="activa()"
+  (click)="elegida.emit(clase())"
+>
+  <img [src]="imagen()" [alt]="clase().nombre" />
+  <div class="tarjeta-clase__cuerpo">
+    <h3 class="tarjeta-clase__nombre">{{ clase().nombre }}</h3>
+    <p class="clase__desc">{{ clase().descripcion }}</p>
+    <div class="tarjeta-clase__pie">
+      <span class="etiqueta etiqueta--{{ clase().categoria }}">{{ clase().categoria }}</span>
+      <span class="etiqueta etiqueta--min">{{ clase().duracionMin }} min</span>
+      @if (larga()) {
+        <span class="etiqueta etiqueta--larga">Larga</span>
+      }
+    </div>
+  </div>
+</article>

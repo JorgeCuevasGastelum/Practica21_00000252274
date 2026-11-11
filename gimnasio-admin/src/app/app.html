@@ -1,0 +1,21 @@
+<header class="barra">
+  <div class="barra__interior">
+    <a routerLink="/clases" class="barra__marca">
+      <img src="/logo.svg" alt="" />
+      Gimnasio Titanes
+    </a>
+    <span class="barra__etiqueta">Panel</span>
+
+    <!-- routerLink: navega sin recargar. routerLinkActive: pone la clase si la ruta es la actual. -->
+    <nav class="barra__enlaces">
+      <a routerLink="/clases" routerLinkActive="barra__enlace--activo" class="barra__enlace">Clases</a>
+      <a routerLink="/horarios" routerLinkActive="barra__enlace--activo" class="barra__enlace">Horarios</a>
+      <a routerLink="/miembros" routerLinkActive="barra__enlace--activo" class="barra__enlace">Miembros</a>
+    </nav>
+  </div>
+</header>
+
+<main class="pagina">
+  <!-- El hueco donde el router pinta la página que coincide con la URL. -->
+  <router-outlet />
+</main>

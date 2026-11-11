@@ -1,0 +1,13 @@
+<div class="filtro">
+  <button [class.activo]="catalogo.categoria() === null" (click)="catalogo.elegirCategoria(null)">
+    Todas
+  </button>
+  @for (categoria of categorias; track categoria) {
+    <button
+      [class.activo]="catalogo.categoria() === categoria"
+      (click)="catalogo.elegirCategoria(categoria)"
+    >
+      {{ categoria }}
+    </button>
+  }
+</div>

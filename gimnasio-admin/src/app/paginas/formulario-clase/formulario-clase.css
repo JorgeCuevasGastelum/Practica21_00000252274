@@ -1,0 +1,6 @@
+/* El objeto listo para mandar. */
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-size: 0.86rem;
+}
